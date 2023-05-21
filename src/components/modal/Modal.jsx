@@ -7,9 +7,28 @@ import css from './Modal.module.css';
 const modalRoot = document.querySelector('#modal-root');
 
 class Modal extends Component {
+
+    componentDidMount() {
+        window.addEventListener('keydown', this.handleKeyDown);
+    };
+
+    componentWillUnmount() {
+        window.removeEventListener('keydown', this.handleKeyDown);
+    };
+
+    handleKeyDown = event => {
+        (event.code === 'Escape') &&
+            this.props.onClose();
+    };
+
+    handleBackdropClick = event => {
+        (event.currentTarget === event.target) &&
+            this.props.onClose();
+    };
+
     render() {
         return createPortal(
-            <div className={clsx(css.overlay)}>
+            <div className={clsx(css.overlay)} onClick={this.handleBackdropClick}>
                 <div className={clsx(css.modal)}>
                     <img src="" alt="item galery" />
                 </div>

@@ -1,26 +1,33 @@
+import { Component } from 'react';
+
 import Searchbar from './searchbar';
 import ImageGallery from './imageGallery';
 import Button from './button';
 import Loader from './loader';
 import Modal from './modal';
 
-export const App = () => {
-  return (
-    <div
-      // style={{
-      //   height: '100vh',
-      //   display: 'flex',
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
-      //   fontSize: 40,
-      //   color: '#010101'
-      // }}
-    >
-      <Searchbar />
-      <ImageGallery />
-      <Loader />
-      <Button />
-      <Modal />
-    </div>
-  );
+export class App extends Component {
+  state = {
+    showModal: false,
+  };
+
+  toggleModal = () => {
+    this.setState({
+      showModal: !this.state.showModal,
+    });
+  };
+
+  render() {
+    const { showModal } = this.state;
+
+    return (
+      <div>
+        <Searchbar />
+        <ImageGallery openModal={this.toggleModal} />
+        <Loader />
+        <Button />
+        { showModal && <Modal onClose={this.toggleModal} /> }
+      </div>
+    );
+  };
 };

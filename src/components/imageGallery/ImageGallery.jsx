@@ -3,10 +3,10 @@ import css from './ImageGallery.module.css';
 
 import ImageGalleryItem from '../imageGalleryItem';
 
-const ImageGallery = () => {
+const ImageGallery = ({ openModal }) => {
     return (
         <ul className={clsx(css["image-gallery"])}>
-            <ImageGalleryItem />
+            <ImageGalleryItem onOpen={openModal} />
         </ul>
     );
 };

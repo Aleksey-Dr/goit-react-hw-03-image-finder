@@ -88,3 +88,12 @@ IX. Create component <Modal>
 8. Added <Modal> component-class to the App.jsx.
 9. Created a Modal.module.css file in the "modal" folder.
 10. Added styles for <Modal> component-class.
+
+X. Create work configuration for the Modal window
+1. <App> component-function changed to component-class.
+2. Added the "state" to the <App>.
+3. Crated a "toggleModal" arrow function in the <App>.
+4. Added componentDidMount() and componentWillUnmount() to the <Modal>.
+5. Crated a "handleKeyDown" arrow function in the <Modal>.
+6. Crated a "handleBackdropClick" arrow function in the <Modal>.
+7. Added props with the "toggleModal" function to <ImageGallery> and <ImageGalleryItem>.
