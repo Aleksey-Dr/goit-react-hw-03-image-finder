@@ -1,6 +1,7 @@
 import Searchbar from './searchbar';
 import ImageGallery from './imageGallery';
 import Button from './button';
+import Loader from './loader';
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
     >
       <Searchbar />
       <ImageGallery />
+      <Loader />
       <Button />
     </div>
   );

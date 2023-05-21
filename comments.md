@@ -56,11 +56,23 @@ VI. Create component <ImageGalleryItem>
 8. Added styles for <ImageGalleryItem> component-function.
 
 VII. Create component <Button>
-1. Created an "button" folder in the "components" folder.
-2. Created an Button.jsx file in the "button" folder.
+1. Created a "button" folder in the "components" folder.
+2. Created a Button.jsx file in the "button" folder.
 3. Created an index.js in the "button" folder.
 4. Created <Button> component-function.
 5. Adeed "import Button from './button';" to the App.jsx.
 6. Added <Button> component-function to the App.jsx.
 7. Created a Button.module.css file in the "button" folder.
 8. Added styles for <Button> component-function.
+
+Fixed styles for <input> of <Searchbar>.
+
+VIII. Create component <Loader>
+1. npm i react-loader-spinner.
+2. Created a "loader" folder in the "components" folder.
+3. Created a Loader.jsx file in the "loader" folder.
+4. Created <Loader> component-function.
+5. Added "import { Grid } from 'react-loader-spinner';".
+6. Added <Grid> component to the <Loader> component-function.
+7. Adeed "import Loader from './loader';" to the App.jsx.
+8. Added <Loader> component-function to the App.jsx.
