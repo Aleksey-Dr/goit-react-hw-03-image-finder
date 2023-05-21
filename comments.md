@@ -44,13 +44,3 @@ V. Create component <ImageGallery>
 7. Created a ImageGallery.module.css file in the "imageGallery" folder.
 8. Added styles for <ImageGallery> component-function.
 9. Added styles for <App> component.
-
-VI. Create component <ImageGalleryItem>
-1. Created an "imageGalleryItem" folder in the "components" folder.
-2. Created an ImageGalleryItem.jsx file in the "imageGalleryItem" folder.
-3. Created an index.js in the "imageGalleryItem" folder.
-4. Created <ImageGalleryItem> component-function.
-5. Adeed "import ImageGallery from '../imageGalleryItem';" to the ImageGallery.jsx.
-6. Added <ImageGalleryItem> component-function to the ImageGallery.jsx.
-7. Created a ImageGalleryItem.module.css file in the "imageGalleryItem" folder.
-8. Added styles for <ImageGalleryItem> component-function.
