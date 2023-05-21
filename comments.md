@@ -54,3 +54,13 @@ VI. Create component <ImageGalleryItem>
 6. Added <ImageGalleryItem> component-function to the ImageGallery.jsx.
 7. Created a ImageGalleryItem.module.css file in the "imageGalleryItem" folder.
 8. Added styles for <ImageGalleryItem> component-function.
+
+VII. Create component <Button>
+1. Created an "button" folder in the "components" folder.
+2. Created an Button.jsx file in the "button" folder.
+3. Created an index.js in the "button" folder.
+4. Created <Button> component-function.
+5. Adeed "import Button from './button';" to the App.jsx.
+6. Added <Button> component-function to the App.jsx.
+7. Created a Button.module.css file in the "button" folder.
+8. Added styles for <Button> component-function.
