@@ -21,12 +21,26 @@ III. Adding and configuring tools
 4. npm i react-icons.
 
 IV. Create component <Searchbar>
-1. Create a "searchbar" folder in the "components" folder.
-2. Create a Searchbar.jsx file in the "searchbar" folder.
-3. Create an index.js in the "searchbar" folder.
-4. Create <Searchbar> component-function.
+1. Created a "searchbar" folder in the "components" folder.
+2. Created a Searchbar.jsx file in the "searchbar" folder.
+3. Created an index.js in the "searchbar" folder.
+4. Created <Searchbar> component-function.
 5. Adeed "import Searchbar from './searchbar';" to the App.jsx.
 6. Added <Searchbar> component-function to the App.jsx.
-7. Create a Searchbar.module.css file in the "searchbar" folder.
+7. Created a Searchbar.module.css file in the "searchbar" folder.
 8. Added styles for <Searchbar> component-function.
 9. Changed common styles (html, body. img).
+
+Fix
+1. Fixed .form styles.
+
+V. Create component <ImageGallery>
+1. Created an "imageGallery" folder in the "components" folder.
+2. Created an ImageGallery.jsx file in the "imageGallery" folder.
+3. Created an index.js in the "imageGallery" folder.
+4. Created <ImageGallery> component-function.
+5. Adeed "import ImageGallery from './imageGallery';" to the App.jsx.
+6. Added <ImageGallery> component-function to the App.jsx.
+7. Created a ImageGallery.module.css file in the "imageGallery" folder.
+8. Added styles for <ImageGallery> component-function.
+9. Added styles for <App> component.

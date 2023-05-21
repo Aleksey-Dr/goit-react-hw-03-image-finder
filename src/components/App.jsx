@@ -1,4 +1,5 @@
 import Searchbar from './searchbar';
+import ImageGallery from './imageGallery';
 
 export const App = () => {
   return (
@@ -13,6 +14,7 @@ export const App = () => {
       // }}
     >
       <Searchbar />
+      <ImageGallery />
     </div>
   );
 };
