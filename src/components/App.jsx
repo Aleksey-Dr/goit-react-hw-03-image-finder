@@ -2,6 +2,7 @@ import Searchbar from './searchbar';
 import ImageGallery from './imageGallery';
 import Button from './button';
 import Loader from './loader';
+import Modal from './modal';
 
 export const App = () => {
   return (
@@ -19,6 +20,7 @@ export const App = () => {
       <ImageGallery />
       <Loader />
       <Button />
+      <Modal />
     </div>
   );
 };

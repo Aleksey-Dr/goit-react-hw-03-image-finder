@@ -76,3 +76,15 @@ VIII. Create component <Loader>
 6. Added <Grid> component to the <Loader> component-function.
 7. Adeed "import Loader from './loader';" to the App.jsx.
 8. Added <Loader> component-function to the App.jsx.
+
+IX. Create component <Modal>
+1. Created a "modal" folder in the "components" folder.
+2. Created a Modal.jsx file in the "modal" folder.
+3. Created an index.js in the "modal" folder.
+4. Created <Modal> component-class.
+5. Added "<div id="modal-root"></div>" to the index.html of "public" folder.
+6. Added "import { createPortal } from 'react-dom';" to the Modal.jsx file.
+7. Adeed "import Modal from './modal';" to the App.jsx.
+8. Added <Modal> component-class to the App.jsx.
+9. Created a Modal.module.css file in the "modal" folder.
+10. Added styles for <Modal> component-class.
