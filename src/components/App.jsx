@@ -8,7 +8,13 @@ import Modal from './modal';
 
 export class App extends Component {
   state = {
+    images: [],
+    term: '',
     showModal: false,
+  };
+
+  handleSearcbarSubmit = term => {
+    this.setState({ term: term });
   };
 
   toggleModal = () => {
@@ -18,15 +24,18 @@ export class App extends Component {
   };
 
   render() {
-    const { showModal } = this.state;
+    const { images, showModal } = this.state;
 
     return (
       <div>
-        <Searchbar />
-        <ImageGallery openModal={this.toggleModal} />
+        <Searchbar onSubmit={this.handleSearcbarSubmit} />
+        <ImageGallery
+          items={images}
+          openModal={this.toggleModal}
+        />
         <Loader />
         <Button />
-        { showModal && <Modal onClose={this.toggleModal} /> }
+        {showModal && <Modal onClose={this.toggleModal} />}
       </div>
     );
   };

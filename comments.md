@@ -97,3 +97,16 @@ X. Create work configuration for the Modal window
 5. Crated a "handleKeyDown" arrow function in the <Modal>.
 6. Crated a "handleBackdropClick" arrow function in the <Modal>.
 7. Added props with the "toggleModal" function to <ImageGallery> and <ImageGalleryItem>.
+
+Fixed Searchbar styles.
+
+XI. Create handler of <Searchbar>
+1. <Searchbar> component-function changed to component-class.
+2. Added the "state" to the <Searchbar>.
+3. Create a "handleTermChange" arrow function.
+4. Added onChange to <input> of the <Searchbar>.
+5. Added onSubmit to <form> of the <Searchbar>.
+6. Create "handleSearcbarSubmit" arrow fanction in <App>.
+7. Added "handleSearcbarSubmit" arrow fanction to props of the <Searchbar>.
+8. Create "handleSubmit" arrow functin in the <Searchbar>.
+9. Added element "term" to "stetes" of <App> and <Searchbar>.
