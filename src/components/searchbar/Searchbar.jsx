@@ -12,12 +12,13 @@ class Searchbar extends Component {
 
   handleTermChange = event => {
     this.setState({
-      term: event.currentTarget.value.toLowerCase(),
+      term: event.target.value.toLowerCase(),
     });
   };
 
   handleSubmit = event => {
     event.preventDefault();
+
     if (this.state.term.trim() === '') {
       alert('Empty string');
       return;
@@ -44,6 +45,7 @@ class Searchbar extends Component {
             autoComplete="off"
             autoFocus
             placeholder="Search images and photos"
+            value={this.state.term}
             onChange={this.handleTermChange}
           />
         </form>

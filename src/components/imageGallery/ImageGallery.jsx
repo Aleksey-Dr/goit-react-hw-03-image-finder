@@ -6,7 +6,13 @@ import ImageGalleryItem from '../imageGalleryItem';
 const ImageGallery = ({ items, openModal }) => {
     return (
         <ul className={clsx(css["image-gallery"])}>
-            {items.map(item => <ImageGalleryItem onOpen={openModal} />)}
+            {items.map(item =>
+                <ImageGalleryItem
+                    key={item.id}
+                    webformatURL={item.webformatURL}
+                    largeImageURL={item.largeImageURL}
+                    onOpen={openModal}
+                />)}
         </ul>
     );
 };

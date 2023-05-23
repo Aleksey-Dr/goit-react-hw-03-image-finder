@@ -6,15 +6,33 @@ import Button from './button';
 import Loader from './loader';
 import Modal from './modal';
 
+import { fetchImages } from '../services/pixabay-api';
 export class App extends Component {
   state = {
     images: [],
     term: '',
     showModal: false,
+    error: false,
+  };
+
+  componentDidUpdate(_, prevState) {
+
+    if (prevState.term !== this.state.term) {
+      try {
+        fetchImages(this.state.term)
+          .then(galery => {
+            this.setState(prevState => ({ images: [...prevState.images, ...galery] }));
+            console.log(galery);
+          });
+          } catch {
+        this.setState({ error: true, });
+      //   // console.log(error);
+      }
+    }
   };
 
   handleSearcbarSubmit = term => {
-    this.setState({ term: term });
+    this.setState({ term });
   };
 
   toggleModal = () => {

@@ -110,3 +110,13 @@ XI. Create handler of <Searchbar>
 7. Added "handleSearcbarSubmit" arrow fanction to props of the <Searchbar>.
 8. Create "handleSubmit" arrow functin in the <Searchbar>.
 9. Added element "term" to "stetes" of <App> and <Searchbar>.
+
+XII. Create "fetch" configuration
+1. Created a "services" folder in the "src" folder.
+2. Created pixabay-api.js file i the "services" folder.
+3. npm i axios.
+4. Added "import axios from 'axios';" to the pixabay-api.js file.
+5. Created "fetchGalery(term)" async function.
+6. Added "import api from '../services/pixabay-api';".
+7. Added "images: []," to the state of <App>.
+8. Added async componentDidMount() to the <App>.
