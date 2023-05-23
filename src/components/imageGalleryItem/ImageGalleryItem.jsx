@@ -5,7 +5,7 @@ const ImageGalleryItem = ({ id, webformatURL, largeImageURL, onOpen }) => {
 
     
     return (
-        <li key={id} className={clsx(css["gallery-item"])} onClick={onOpen}>
+        <li key={id} className={clsx(css["gallery-item"])} onClick={() => onOpen(largeImageURL)}>
             <img src={webformatURL} alt="item galery" />
         </li>
     );

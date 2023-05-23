@@ -120,3 +120,5 @@ XII. Create "fetch" configuration
 6. Added "import api from '../services/pixabay-api';".
 7. Added "images: []," to the state of <App>.
 8. Added async componentDidMount() to the <App>.
+
+XIII. Added open modal window with a large image.

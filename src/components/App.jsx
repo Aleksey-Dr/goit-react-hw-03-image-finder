@@ -10,6 +10,7 @@ import { fetchImages } from '../services/pixabay-api';
 export class App extends Component {
   state = {
     images: [],
+    largeImage: '',
     term: '',
     showModal: false,
     error: false,
@@ -22,8 +23,9 @@ export class App extends Component {
         fetchImages(this.state.term)
           .then(galery => {
             this.setState(prevState => ({ images: [...prevState.images, ...galery] }));
+            console.log(this.state.images);
             console.log(galery);
-          });
+          })
           } catch {
         this.setState({ error: true, });
       //   // console.log(error);
@@ -35,14 +37,15 @@ export class App extends Component {
     this.setState({ term });
   };
 
-  toggleModal = () => {
+  toggleModal = (largeImage) => {
     this.setState({
       showModal: !this.state.showModal,
+      largeImage,
     });
   };
 
   render() {
-    const { images, showModal } = this.state;
+    const { images, largeImage, showModal } = this.state;
 
     return (
       <div>
@@ -53,7 +56,7 @@ export class App extends Component {
         />
         <Loader />
         <Button />
-        {showModal && <Modal onClose={this.toggleModal} />}
+        {showModal && <Modal onClose={this.toggleModal} largeImage={largeImage} />}
       </div>
     );
   };

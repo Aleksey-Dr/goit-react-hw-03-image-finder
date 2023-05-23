@@ -22,6 +22,7 @@ class Modal extends Component {
     };
 
     handleBackdropClick = event => {
+        console.log(this.props.largeImage);
         (event.currentTarget === event.target) &&
             this.props.onClose();
     };
@@ -30,7 +31,7 @@ class Modal extends Component {
         return createPortal(
             <div className={clsx(css.overlay)} onClick={this.handleBackdropClick}>
                 <div className={clsx(css.modal)}>
-                    <img src="" alt="item galery" />
+                    <img src={this.props.largeImage} alt="item galery" />
                 </div>
             </div>,
             modalRoot
