@@ -8,8 +8,7 @@ const Loader = () => {
             color="#3f51b5"
             ariaLabel="grid-loading"
             radius="12.5"
-            wrapperStyle={{}}
-            wrapperClass=""
+            wrapperStyle={{margin: 'auto'}}
             visible={true}
         />
     );
