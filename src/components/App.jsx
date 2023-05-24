@@ -16,17 +16,19 @@ export class App extends Component {
     images: [],
     largeImage: '',
     term: '',
-    showModal: false,
-    error: false,
     isLoading: false,
+    error: false,
+    showModal: false,
+    pageNum: 1,
   };
 
   componentDidUpdate(_, prevState) {
 
-    if (prevState.term !== this.state.term) {
+    if (prevState.term !== this.state.term
+      || prevState.pageNum !== this.state.pageNum) {
       try {
         this.setState({ isLoading: true });
-        fetchImages(this.state.term)
+        fetchImages(this.state.term, this.state.pageNum)
           .then(galery => {
             this.setState(prevState => ({
               images: [...prevState.images, ...galery],
@@ -52,6 +54,13 @@ export class App extends Component {
     });
   };
 
+  onLoadMore = () => {
+    this.setState(prevState => 
+       ({ pageNum: prevState.pageNum + 1 })
+    );
+    console.log(this.state.pageNum);
+  };
+
   render() {
     const { images, largeImage, showModal, isLoading } = this.state;
 
@@ -67,7 +76,7 @@ export class App extends Component {
           <Loader />}
         
         {images.length > 11 &&
-          <Button />}
+          <Button onClick={this.onLoadMore} />}
 
         {showModal && <Modal onClose={this.toggleModal} largeImage={largeImage} />}
       </div>

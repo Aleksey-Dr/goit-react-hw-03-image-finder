@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import css from './Button.module.css';
 
-const Button = () => {
+const Button = ({ onClick }) => {
     return (
-        <button type="button" className={clsx(css.button)}>Load more</button>
+        <button type="button" onClick={onClick} className={clsx(css.button)}>Load more</button>
     );
 };
 
