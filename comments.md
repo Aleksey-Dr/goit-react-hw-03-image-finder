@@ -136,3 +136,10 @@ XIV. Added action of "Load more" button
 XV. Added notification
 1. npm i notiflix.
 2. Added "import Notiflix from 'notiflix';" to the App.jsx.
+
+XVI. Added "prop-types"
+1. For the <Button>.
+2. For the <ImageGallery>.
+3. For The <ImageGalleryItem>.
+4. For The <Modal>.
+5. For The <Searchbar>.

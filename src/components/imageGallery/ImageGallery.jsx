@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import clsx from 'clsx';
 import css from './ImageGallery.module.css';
 
@@ -15,6 +17,17 @@ const ImageGallery = ({ items, openModal }) => {
                 />)}
         </ul>
     );
+};
+
+ImageGallery.propTypes = {
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            webformatURL: PropTypes.string.isRequired,
+            largeImageURL: PropTypes.string.isRequired,
+        }).isRequired
+    ).isRequired,
+    openModal: PropTypes.func.isRequired,
 };
 
 export default ImageGallery;
