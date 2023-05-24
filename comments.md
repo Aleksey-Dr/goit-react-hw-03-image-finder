@@ -129,6 +129,10 @@ Fixed
 3. Styles of <Buttn>.
 4. Styles of <Loader>.
 
-XIV. Add action of "Load more" button.
+XIV. Added action of "Load more" button
 1. Added "pageNum" to the state of <App>.
 2. Added "onLoadMore" arrow function.
+
+XV. Added notification
+1. npm i notiflix.
+2. Added "import Notiflix from 'notiflix';" to the App.jsx.

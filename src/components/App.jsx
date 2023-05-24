@@ -1,5 +1,7 @@
 import { Component } from 'react';
 
+import Notiflix from 'notiflix';
+
 import Searchbar from './searchbar';
 import ImageGallery from './imageGallery';
 import Button from './button';
@@ -24,27 +26,46 @@ export class App extends Component {
 
   componentDidUpdate(_, prevState) {
 
+    Notiflix.Notify.init({
+      width: '300px',
+      timeout: 4000,
+      fontSize: '16px',
+      warning: {
+        textColor: '#3f51b5',
+      }
+    });
+
     if (prevState.term !== this.state.term
       || prevState.pageNum !== this.state.pageNum) {
       try {
         this.setState({ isLoading: true });
         fetchImages(this.state.term, this.state.pageNum)
           .then(galery => {
-            this.setState(prevState => ({
-              images: [...prevState.images, ...galery],
-              isLoading: false
-            }));
+            if (galery.length === 0) {
+              Notiflix.Notify.warning('Nothing found for your request');
+              this.setState({ isLoading: false });
+            } else {
+              this.setState(prevState => ({
+                images: [...prevState.images, ...galery],
+                isLoading: false
+              }));
+            }
           });
       }
-      catch {
+      catch (error) {
         this.setState({ error: true, isLoading: false });
-      //   // console.log(error);
+        Notiflix.Notify.failure('Oops... Something went wrong please try again!');
+        console.log(error);
       };
     }
   };
 
   handleSearcbarSubmit = term => {
-    this.setState({ term });
+    this.setState({
+      term,
+      images: [],
+      pageNum: 1
+    });
   };
 
   toggleModal = (largeImage) => {
@@ -58,7 +79,6 @@ export class App extends Component {
     this.setState(prevState => 
        ({ pageNum: prevState.pageNum + 1 })
     );
-    console.log(this.state.pageNum);
   };
 
   render() {
